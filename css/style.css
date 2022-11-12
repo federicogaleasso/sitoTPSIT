@@ -1,0 +1,73 @@
+.navbar-brand,
+.navbar-nav > li > a{
+	height: 80px;
+	line-height: 50px;
+
+}
+
+.carousel-inner > .item {min-height: 100vh; background-size: cover; background-position: center center}
+
+.tab-pane{min-height: 300px;}
+
+.btn-primary {
+    color: #333;
+    background-color: transparent;
+    border-color: #333;
+		border-radius: 0; border-width: 4px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+.big-padding{padding: 100px 0;}
+
+.popover {z-index: 100; border-radius: 2px; border: 1px solid #eee}
+.popover-content img{height:122px;margin-bottom: 15px; width:100%;}
+
+.panel h4{margin:0;}
+.panel h4 a{display: block;background: #333;color:#fff;padding: 15px 20px;text-decoration: none;}
+.panel h4 a:hover{background: #555;}
+.panel-padding{padding: 20px;}
+
+.panel-group .panel{border-radius:0;}
+
+/*ANIMAZIONI*/
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.footer{background: #333; margin-top: 60px;}
+.footer p{color:#fff;padding:100px;text-align: center;margin-bottom: 0}
