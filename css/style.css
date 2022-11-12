@@ -1,3 +1,7 @@
+body{
+  background-color: black;
+}
+
 .navbar-brand,
 .navbar-nav > li > a{
 	height: 80px;
@@ -32,7 +36,7 @@
 
 .panel-group .panel{border-radius:0;}
 
-/*ANIMAZIONI*/
+/*INIZIO ANIMAZIONI*/
 
 .animated {
   animation-duration: 1s;
@@ -71,3 +75,324 @@
 
 .footer{background: #333; margin-top: 60px;}
 .footer p{color:#fff;padding:100px;text-align: center;margin-bottom: 0}
+
+/*FINE ANIMAZIONI*/
+
+/*INIZIO BOTTONE BENVENUTO*/
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#buttonBenvenuto {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  color: #fff;
+  padding: 20px 50px;
+  border: solid 1px white;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#buttonBenvenuto:hover {
+  background: white;
+  border: solid 1px black;
+  color: black;
+  transition: 1s;
+}
+
+/*FINE BOTTONE BENVENUTO*/
+
+/*INIZIO BOTTONE XML*/
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#buttonXML {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  color: #f1a600;
+  padding: 20px 50px;
+  border: solid 1px #f1a600;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#buttonXML:hover {
+  background: #f1a600;
+  border: solid 1px black;
+  color: black;
+  transition: 1s;
+}
+
+/*FINE BOTTONE XML*/
+
+/*INIZIO BOTTONE JSON*/
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#buttonJSON {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  color: #848484;
+  padding: 20px 50px;
+  border: solid 1px #848484;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#buttonJSON:hover {
+  background: #848484;
+  border: solid 1px black;
+  color: black;
+  transition: 1s;
+}
+
+/*FINE BOTTONE JSON*/
+
+/*INIZIO BOTTONE JS*/
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#buttonJS {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  color: #fcdb00;
+  padding: 20px 50px;
+  border: solid 1px #fcdb00;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#buttonJS:hover {
+  background: #fcdb00;
+  border: solid 1px black;
+  color: black;
+  transition: 1s;
+}
+
+/*FINE BOTTONE JS*/
+
+/*INIZIO BOTTONE REACT */
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#buttonREACT {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  color: #5ed2ff;
+  padding: 20px 50px;
+  border: solid 1px #5ed2ff;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#buttonREACT:hover {
+  background: #5ed2ff;
+  border: solid 1px black;
+  color: black;
+  transition: 1s;
+}
+
+/*FINE BOTTONE REACT*/
+
+.containerHome{
+  color:white;
+}
+
+hr{
+  background-color: white;
+  border-radius: 100px;
+  width: 30vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 2px;
+}
+
+/*INIZIO FOOTER*/
+.container-fluid *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  height: 350px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:25vh;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+/*FINE FOOTER*/
+#allrightsreserved{
+  font-size: 15px;
+  padding:20px;
+}
+
+#footerHome,
+#footerXML,
+#footerJSON,
+#footerJS,
+#footerReact{
+  font-size: 17px;
+}
