@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--INIZIO HEAD-->
+<head>
+	<meta charset="UTF-8">
+	<title>Galeasso - Sito TPSIT</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<!--FINE HEAD-->
+
+<!--INIZIO BODY-->
+<body data-spy="scroll" data-target="#navbar-example">
+
+<!--INIZIO NAVBAR-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-example" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!--INIZIO DROPDOWN LOGO-->
+      <style>
+        .dropbtn {
+            background-color: #222222;
+            color: white;
+            padding: 0px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #807f7f;
+            min-width: 8.5vh;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+            margin-left:13px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #222222;
+        }
+        .div-loghidropdown:hover{
+          background-color: #9c9c9c;
+        }
+        </style>
+        <div class="dropdown">
+          <button class="dropbtn"> <img src="./img/favicon.png" alt="" max-width="100%" width="80vh"> </button>
+          <div class="dropdown-content">
+            <div class="div-loghidropdown"><a href="https://www.instagram.com/federico.galeasso/" target=”_blank”><img src="./img/instagram.png" alt="" width="40vh"></a></div>
+            <div class="div-loghidropdown"><a href="https://github.com/federicogaleasso/sitoTPSIT.git" target=”_blank”><img src="./img/github.png" alt="" width="40vh"></a></div>
+            
+            
+          </div>
+        </div>
+        <!--FINE DROPDOWN LOGO-->
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-example">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#carousel">Home</a></li>
+        <li><a href="#">XML</a></li>
+        <li><a href="#">JSON</a></li>
+        <li><a href="#">JS Avanzato</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#scorriGiu">Scopri di più</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--FINE NAVBAR-->
+
+<!--INIZIO CAROUSEL-->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+    <li data-target="#carousel" data-slide-to="3"></li>
+    <li data-target="#carousel" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="background-image: url(./img/benvenuto.jpg);">
+      <div class="carousel-caption animated fadeInUp">
+        <h3>Benvenuto!</h3>
+		    <p>Impara le basi dell'XML, JSON, Javascript Avanzato e React</p>
+        <a href="#scorriGiu"><button type="button" id="buttonBenvenuto">Scopri di più</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(./img/XML.jpg);">
+      <div class="carousel-caption animated fadeInUp">
+        <h3>XML</h3>
+        <p>Impara le basi dell'XML</p>
+        <a href="#"><button type="button" id="buttonXML">Inizia ora</button></a>
+      </div>
+    </div>
+	<div class="item" style="background-image: url(./img/JSON.jpg);">
+      <div class="carousel-caption animated fadeInUp">
+        <h3>JSON</h3>
+        <p>Impara le basi del JSON</p>
+        <a href="#"><button type="button" id="buttonJSON">Inizia ora</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(./img/JS.jpg);">
+        <div class="carousel-caption animated fadeInUp">
+          <h3>JS Avanzato</h3>
+          <p>Impara le basi di Javascript Avanzato</p>
+          <a href="#"><button type="button" id="buttonJS">Inizia ora</button></a>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(./img/REACT.jpg);">
+        <div class="carousel-caption animated fadeInUp">
+          <h3>React</h3>
+          <p>Impara le basi di React</p>
+          <a href="#"><button type="button" id="buttonREACT">Inizia ora</button></a>
+        </div>
+      </div>
+  </div>
+  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--FINE CAROUSEL-->
+
+<!--INIZIO CONTAINER-->
+<div class="container containerHome" id="scorriGiu">
+  <hr/>
+	<div class="row animated fadeInUp rigaCard">
+		<div class="col">
+			<h3>| Cosa trovi in questo sito?</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis soluta et fugit, in blanditiis repellat nam, voluptatibus consectetur, debitis pariatur quas voluptates quasi minima temporibus earum explicabo. Adipisci, impedit, praesentium.</p>
+		</div>
+    <div class="col divXML">
+      <h3>XML</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis soluta et fugit, in blanditiis repellat nam, voluptatibus consectetur, debitis pariatur quas voluptates quasi minima temporibus earum explicabo. Adipisci, impedit, praesentium.</p>
+    </div>
+    <div class="col divJSON">
+      <h3>JSON</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis soluta et fugit, in blanditiis repellat nam, voluptatibus consectetur, debitis pariatur quas voluptates quasi minima temporibus earum explicabo. Adipisci, impedit, praesentium.</p>
+    </div>
+    <div class="col divJS">
+      <h3>JavaScript Avanzato</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis soluta et fugit, in blanditiis repellat nam, voluptatibus consectetur, debitis pariatur quas voluptates quasi minima temporibus earum explicabo. Adipisci, impedit, praesentium.</p>
+    </div>
+    <div class="col divREACT">
+      <h3>React</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis soluta et fugit, in blanditiis repellat nam, voluptatibus consectetur, debitis pariatur quas voluptates quasi minima temporibus earum explicabo. Adipisci, impedit, praesentium.</p>
+    </div>
+	</div>
+</div>
+<!--FINE CONTAINER-->
+
+<!-- INIZIO FOOTER -->
+<div class="container-fluid">
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-github"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#carousel"><div id="footerHome">Home</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="#"><div id="footerXML">XML</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="#"><div id="footerJSON">JSON</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="#"><div id="footerJS">JS Avanazto</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="#"><div id="footerReact">React</div></a></li>
+    </ul>
+    <p id="allrightsreserved">© 2022 Federico Galeasso. All rights reserved.</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+<!-- FINE FOOTER -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$('body').scrollspy({ target: '#navbar-example' });
+	$('[data-toggle="popover"]').popover();
+	$(".navbar-collapse ul li a[href^='#']").on('click',function(e){
+		target = this.hash;
+		e.preventDefault();
+		$('html,body').animate({
+			scrollTop : $(this.hash).offset().top
+		}, 600, function(){
+			window.location.hash = target;
+		});
+	});
+</script>
+</body>
+<!--FINE BODY-->
+</html>
