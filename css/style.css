@@ -2,6 +2,13 @@ body{
   background-color: black;
 }
 
+/*INIZIO NAVBAR*/
+
+.navbar-toggle{
+  border:none;
+  margin-top:3vh;
+}
+
 .navbar-brand,
 .navbar-nav > li > a{
 	height: 80px;
@@ -35,6 +42,8 @@ body{
 .panel-padding{padding: 20px;}
 
 .panel-group .panel{border-radius:0;}
+
+/*FINE NAVBAR*/
 
 /*INIZIO ANIMAZIONI*/
 
@@ -96,7 +105,7 @@ body{
   color: #fff;
   padding: 20px 50px;
   border: solid 1px white;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -104,7 +113,6 @@ body{
 
 #buttonBenvenuto:hover {
   background: white;
-  border: solid 1px black;
   color: black;
   transition: 1s;
 }
@@ -137,7 +145,6 @@ body{
 
 #buttonXML:hover {
   background: #f1a600;
-  border: solid 1px black;
   color: black;
   transition: 1s;
 }
@@ -170,7 +177,6 @@ body{
 
 #buttonJSON:hover {
   background: #848484;
-  border: solid 1px black;
   color: black;
   transition: 1s;
 }
@@ -203,7 +209,6 @@ body{
 
 #buttonJS:hover {
   background: #fcdb00;
-  border: solid 1px black;
   color: black;
   transition: 1s;
 }
@@ -236,7 +241,6 @@ body{
 
 #buttonREACT:hover {
   background: #5ed2ff;
-  border: solid 1px black;
   color: black;
   transition: 1s;
 }
@@ -261,7 +265,6 @@ hr{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
@@ -384,6 +387,7 @@ hr{
   }
 }
 /*FINE FOOTER*/
+
 #allrightsreserved{
   font-size: 15px;
   padding:20px;
@@ -403,14 +407,13 @@ hr{
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  font: bold 12px Arial, Helvetica, sans-serif;
   color: #f1a600;
   padding: 20px 50px;
-  border: solid 2px #f1a50048;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 8vh;
+  border: solid 1px black;
 }
 
 .divXML > p {
@@ -418,8 +421,8 @@ hr{
 }
 
 .divXML:hover {
-  border: solid 2px #f1a500;
-  transition: 1s;
+  border: solid 1px #f1a500;
+  transition: 0.5s;
 }
 
 /*FINE DIV XML*/
@@ -430,10 +433,9 @@ hr{
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  font: bold 12px Arial, Helvetica, sans-serif;
   color: #848484;
   padding: 20px 50px;
-  border: solid 2px #8484844f;
+  border: solid 1px black;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
@@ -445,8 +447,8 @@ hr{
 }
 
 .divJSON:hover {
-  border: solid 2px #848484;
-  transition: 1s;
+  border: solid 1px #848484;
+  transition: 0.5s;
 }
 
 /*FINE DIV JSON*/
@@ -457,10 +459,9 @@ hr{
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  font: bold 12px Arial, Helvetica, sans-serif;
   color: #fcdb00;
   padding: 20px 50px;
-  border: solid 2px #fcda0042;
+  border: solid 1px black;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
@@ -472,8 +473,8 @@ hr{
 }
 
 .divJS:hover {
-  border: solid 2px #fcdb00;
-  transition: 1s;
+  border: solid 1px #fcdb00;
+  transition: 0.5s;
 }
 
 /*FINE DIV JS*/
@@ -484,10 +485,9 @@ hr{
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  font: bold 12px Arial, Helvetica, sans-serif;
   color: #5ed2ff;
   padding: 20px 50px;
-  border: solid 2px #5ed1ff46;
+  border: solid 1px black;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
@@ -499,8 +499,8 @@ hr{
 }
 
 .divREACT:hover {
-  border: solid 2px #5ed2ff;
-  transition: 1s;
+  border: solid 1px #5ed2ff;
+  transition: 0.5s;
 }
 
 /*FINE DIV REACT*/
