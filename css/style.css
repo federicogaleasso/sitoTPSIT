@@ -3,7 +3,6 @@ body{
 }
 
 /*INIZIO NAVBAR*/
-
 .navbar-toggle{
   border:none;
   margin-top:3vh;
@@ -137,7 +136,7 @@ body{
   color: #f1a600;
   padding: 20px 50px;
   border: solid 1px #f1a600;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -169,7 +168,7 @@ body{
   color: #848484;
   padding: 20px 50px;
   border: solid 1px #848484;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -201,7 +200,7 @@ body{
   color: #fcdb00;
   padding: 20px 50px;
   border: solid 1px #fcdb00;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -233,7 +232,7 @@ body{
   color: #5ed2ff;
   padding: 20px 50px;
   border: solid 1px #5ed2ff;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -407,13 +406,12 @@ hr{
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  color: #f1a600;
+  color: #f1a500;
   padding: 20px 50px;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 8vh;
-  border: solid 1px black;
 }
 
 .divXML > p {
@@ -421,7 +419,7 @@ hr{
 }
 
 .divXML:hover {
-  border: solid 1px #f1a500;
+  color:#f1a50071;
   transition: 0.5s;
 }
 
@@ -436,7 +434,6 @@ hr{
   color: #848484;
   padding: 20px 50px;
   border: solid 1px black;
-  background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
   margin-top: 1vh;
@@ -447,7 +444,7 @@ hr{
 }
 
 .divJSON:hover {
-  border: solid 1px #848484;
+  color:#8484846c;
   transition: 0.5s;
 }
 
@@ -461,7 +458,6 @@ hr{
   text-decoration: none;
   color: #fcdb00;
   padding: 20px 50px;
-  border: solid 1px black;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
@@ -473,7 +469,7 @@ hr{
 }
 
 .divJS:hover {
-  border: solid 1px #fcdb00;
+  color: #fcda006e;
   transition: 0.5s;
 }
 
@@ -487,7 +483,6 @@ hr{
   text-decoration: none;
   color: #5ed2ff;
   padding: 20px 50px;
-  border: solid 1px black;
   background: black;
   border-radius: 30px;
   margin-bottom: 3vh;
@@ -499,8 +494,27 @@ hr{
 }
 
 .divREACT:hover {
-  border: solid 1px #5ed2ff;
+  color:#5ed1ff70;
   transition: 0.5s;
 }
 
 /*FINE DIV REACT*/
+
+/*INIZIO DIV COSA TROVI */
+
+.divCS {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px 50px;
+  background: black;
+  border-radius: 30px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+.divCS > p {
+  color:white;
+}
+
+/*FINE DIV COSA TROVI*/
