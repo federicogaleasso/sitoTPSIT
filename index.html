@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--INIZIO HEAD-->
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+  <link rel="icon" type="image/png" href="./img/favicon2.png"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<!--FINE HEAD-->
+
+<!--INIZIO BODY-->
+<body data-spy="scroll" data-target="#navbar-example">
+
+<!--INIZIO NAVBAR-->
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #111111;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-example" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <button class="logoNav"> <img src="./img/favicon2.png" alt="" max-width="100%" width="70vh"> </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-example">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./json.html">JSON</a></li>
+        <li><a href="./xml.html">XML</a></li>
+        <li><a href="./js.html">JS Avanzato</a></li>
+        <li><a href="./react.html">React</a></li>
+        <li><a href="./api.html">API</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--FINE NAVBAR-->
+
+<!--INIZIO PROGRESS BAR-->
+<div id="scroll-progress_home"></div>
+<script>
+  const scrollProgress = document.getElementById('scroll-progress_home');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    scrollProgress.style.width = `${(scrollTop / height) * 35}%`;
+  });
+</script>
+<!--FINE PROGRESS BAR-->
+
+<!--INIZIO CAROUSEL-->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+    <li data-target="#carousel" data-slide-to="3"></li>
+    <li data-target="#carousel" data-slide-to="4"></li>
+    <li data-target="#carousel" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="background-image: url(./img/benvenuto.jpg);">
+      <div class="carousel-caption carouselBenvenuto animated fadeInUp">
+        <img src="./img/favicon2.png" id="img_favicon_benvenuto"/>
+        <h1>Benvenuto!</h3>
+		    <p>Impara le basi di JSON, XML, JavaScript Avanzato e React</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(./img/JSON.jpg);">
+      <div class="carousel-caption animated fadeInUp">
+        <h3>JSON</h3>
+        <p>Impara le basi del JSON</p>
+        <a href="./json.html"><button type="button" id="buttonJSON">Inizia ora</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(./img/XML.jpg);">
+      <div class="carousel-caption animated fadeInUp">
+        <h3>XML</h3>
+        <p>Impara le basi dell'XML</p>
+        <a href="./xml.html"><button type="button" id="buttonXML">Inizia ora</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(./img/JS.jpg);">
+        <div class="carousel-caption animated fadeInUp">
+          <h3>JS Avanzato</h3>
+          <p>Impara le basi di JavaScript Avanzato</p>
+          <a href="./js.html"><button type="button" id="buttonJS">Inizia ora</button></a>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(./img/REACT.jpg);">
+        <div class="carousel-caption animated fadeInUp">
+          <h3>React</h3>
+          <p>Impara le basi di React</p>
+          <a href="./react.html"><button type="button" id="buttonREACT">Inizia ora</button></a>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(./img/API.jpg);">
+        <div class="carousel-caption animated fadeInUp">
+          <h3>API</h3>
+          <p>Impara le basi delle API</p>
+          <a href="./api.html"><button type="button" id="buttonAPI">Inizia ora</button></a>
+        </div>
+      </div>
+  </div>
+  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--FINE CAROUSEL-->
+
+<!--INIZIO CONTAINER-->
+<div class="container containerHome">
+  <hr/>
+	<div class="row">
+		<div class="col divCS" data-aos="zoom-in">
+			<h2>Cosa trovi in questo sito?</h2>
+    </br>
+			<p>In questo sito web trovi una guida completa su questi argomenti: JSON, XML, JS Avanzato, React e le API. Sono presenti, oltre alle definizioni, esempi di codice e materiale utile per approfondire l'argomento. Puoi navigare tra le pagine del sito in alto nella barra di navigazione o in alternativa puoi cliccare sui button che trovi di seguito.</p>
+		</div>
+    <div class="col divJSON" data-aos="zoom-in">
+      <b><h2>JSON</h2></b>
+    </br>
+      <p><strong>JSON</strong> (<i> JavaScript Object Notation</i> ) è un semplice formato per lo scambio di dati. Per le persone è facile da leggere e scrivere, mentre per le macchine risulta facile da generare e analizzarne la sintassi. Si basa su un sottoinsieme del Linguaggio di Programmazione JavaScript, Standard ECMA-262 Terza Edizione</p>
+      <a href="./json.html"><button type="button" id="buttonJSON">Inizia ora</button></a>
+    </div>
+    <div class="col divXML" data-aos="zoom-in">
+      <b><h2>XML</h2></b>
+    </br>
+      <p><strong>XML</strong> ( <i>Extensible Markup Language</i> ) è un linguaggio che consente la rappresentazione di documenti e dati strutturati su supporto digitale. È uno strumento potente e versatile per la creazione, memorizzazione e distribuzione di documenti digitali.</p>
+      <a href="./xml.html"><button type="button" id="buttonXML">Inizia ora</button></a>
+    </div>
+    <div class="col divJS" data-aos="zoom-in">
+      <b><h2>JavaScript Avanzato</h2></b>
+    </br>
+      <p><strong>JavaScript</strong> è un linguaggio di programmazione che consente di aggiungere funzionalità interattive e altri contenuti dinamici alle pagine web. <strong>JavaScript Avanzato</strong> si riferisce alle tecniche di programmazione e alle funzionalità più avanzate del linguaggio, come ad esempio le Promises.</p>
+      <a href="./js.html"><button type="button" id="buttonJS">Inizia ora</button></a>
+    </div>
+    <div class="col divREACT" data-aos="zoom-in">
+      <b><h2>React</h2></b>
+    </br>
+      <p><strong>React</strong> è una libreria JavaScript sviluppata da Facebook che permette di creare le SPA ( <i>Single Page Application</i> ). È una libreria molto veloce e lavora per componenti.</p>
+      <a href="./react.html"><button type="button" id="buttonREACT">Inizia ora</button></a>
+    </div>
+    <div class="col divAPI" data-aos="zoom-in">
+      <b><h2>API</h2></b>
+    </br>
+      <p><strong>API</strong> ( <i>Application Programming Interface</i> ) indica un insieme di definizioni e protocolli che consentono a diverse applicazioni software di comunicare tra loro. Le API definiscono le modalità di interazione tra due o più sistemi software, stabilendo come le richieste e le risposte di dati debbano essere strutturate e trasmesse.</p>
+      <a href="./api.html"><button type="button" id="buttonAPI">Inizia ora</button></a>
+    </div>
+	</div>
+</div>
+<!--FINE CONTAINER-->
+
+<!-- INIZIO FOOTER -->
+<div class="container-fluid">
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/federico.galeasso/" target="blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/federicogaleasso/sitoTPSIT.git" target="blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="./index.html"><div id="footerHome">Home</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./json.html"><div id="footerJSON">JSON</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./xml.html"><div id="footerXML">XML</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./js.html"><div id="footerJS">JS Avanzato</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./react.html"><div id="footerReact">React</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./api.html"><div id="footerAPI">API</div></a></li>
+    </ul>
+    <p id="allrightsreserved">© 2023 Federico Galeasso. All rights reserved.</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+<!-- FINE FOOTER -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+<!--FINE BODY-->
+</html>
