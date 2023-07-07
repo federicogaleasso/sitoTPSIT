@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--INIZIO HEAD-->
+<head>
+	<meta charset="UTF-8">
+	<title>JS Avanzato</title>
+  <link rel="icon" type="image/png" href="./img/favicon2.png"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://kit.fontawesome.com/0980e2a571.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-D4eQbBTE2EU3x0sVcI3/7s4F7rnGlHDLtI5IZ+UAzslkG1aiFuyAJv5V65Pyt8Nv" crossorigin="anonymous">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+
+  <script>
+    function copyCode(className, clip, check) {
+      const codeElement = document.querySelector(className + '.outside-code-toolbar');
+      const code = codeElement.innerText;
+      const clipboard = document.querySelector(clip);
+      const checkmark = document.querySelector(check);
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          clipboard.style.display = "inline";
+          checkmark.style.display = "none";
+
+          Swal.fire({
+            position: 'top',
+            showConfirmButton: false,
+            timer: 1500,
+            background:'#292929',
+            title: '<span style="color: white;">Contenuto copiato!</span>',
+            customClass: {
+              popup: 'custom-alert-popup'
+            }
+          });
+
+          clipboard.style.display = "none";
+          checkmark.style.display = "inline";
+          setTimeout(function() {
+            clipboard.style.display = "inline";
+            checkmark.style.display = "none";
+          }, 3000);
+        })
+    }
+  </script>
+
+  <link rel="stylesheet" href="./highlight/styles/base16/onedark.min.css">
+  <script src="./highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<!--FINE HEAD-->
+
+<!--INIZIO BODY-->
+<body data-spy="scroll" data-target="#navbar-example">
+
+<!--INIZIO NAVBAR-->
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #0e0e0e;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-example" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html"><img src="./img/favicon2.png" alt="" max-width="100%" width="70vh" class="logoNav"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-example">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="./json.html" class="navbar-link">JSON</a></li>
+        <li><a href="./xml.html" class="navbar-link">XML</a></li>
+        <li><a href="./js.html" class="navbar-link">JS Avanzato</a></li>
+        <li><a href="./react.html" class="navbar-link">React</a></li>
+        <li><a href="./api.html" class="navbar-link">API</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--FINE NAVBAR-->
+
+<!--INIZIO PROGRESS BAR-->
+<div id="scroll-progress_xml"></div>
+<script>
+  const scrollProgress = document.getElementById('scroll-progress_xml');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    scrollProgress.style.width = `${(scrollTop / height) * 19}%`;
+  });
+</script>
+<!--FINE PROGRESS BAR-->
+
+<!-- INIZIO BOTTONE BACK TO TOP -->
+<script>
+  const back_to_top =()=> {
+    const topElement = document.documentElement;
+    topElement.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+</script>
+<button class="back_to_top" onclick="back_to_top()">&#8593;</button>
+<!-- FINE BOTTONE BACK TO TOP -->
+
+<!--INIZIO CONTAINER-->
+<div class="container">
+	<div class="row">
+    <div class="col div_mt" data-aos="fade-up">
+      <h2>Cos'è JavaScript Avanzato?</h2>
+      </br>
+      <p><strong>JavaScript</strong> è un linguaggio di programmazione che consente di aggiungere funzionalità interattive e altri contenuti dinamici alle pagine web. <strong>JavaScript Avanzato</strong> si riferisce alle tecniche di programmazione e alle funzionalità più avanzate del linguaggio, come ad esempio le Promises.</p>
+      
+    </br></br></br>
+    <div data-aos="fade-right">
+      <h2>Contenuti</h2>
+      </br>
+      <p>
+      Questo è ciò che andremo a visionare:
+        </br>
+        <div id="link_ancoraggio">
+          <a href="#template_string"><li><b>Template String</b></li></a>
+          <a href="#map"><li><b>Funzione map()</b></li></a>
+          <a href="#promise"><li><b>Promise</b></li></a>
+          <a href="#destrutturazione"><li><b>Destrutturazione</b></li></a>
+          <a href="#spread"><li><b>Operatore Spread</b></li></a>
+        </div>
+      </p>
+    </div>
+
+    <div id="template_string"></div>
+      </br></br></br>
+
+      <div data-aos="fade-right">
+        <h2>Template String</h2>
+      </br>
+      <p>
+        Le <strong>template string</strong> consentono di creare stringhe più leggibili rispetto alle stringhe tradizionali. Per definire una template string, utilizziamo le virgolette inverse (` `), anziché le virgolette singole o doppie. Inoltre, all'interno di una template string, è possibile includere espressioni JavaScript utilizzando la sintassi <i>${ ... }</i>.
+      </p>
+      </br>
+      Di seguito è presente un esempio di utilizzo di <strong>template string</strong>:
+      </br></br>
+<pre class="code_1 outside-code-toolbar" data-aos="zoom-in"><button class="copy" style="float: right;" onclick="copyCode('.code_1','.clipboard_1','.checkmark_1')">
+  <span>
+    <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="clipboard_1">
+      <g>
+        <path fill="currentColor" d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path>
+      </g>
+    </svg>
+    <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="checkmark_1">
+      <g>
+        <path data-original="#000000" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
+      </g>
+    </svg>
+  </span>
+</button><code class="language-javascript inside-code-toolbar">const stampa=()=>{
+    let nome = "mario";
+    let cognome = "rossi";
+
+    console.log("Benvenuto " + nome + " " + cognome);
+
+    //TEMPLATE STRING
+    console.log(`Benvenuto ${nome} ${cognome}`);
+}
+</code></pre>
+      </div>
+
+      <div id="map"></div>
+    </br></br></br>
+
+    <div data-aos="fade-right">
+      <h2>Funzione map()</h2>
+    </br>
+    <p>
+      La funzione <strong>map()</strong> è un metodo degli array che consente di iterare su tutti gli elementi dell'array ed applicare una trasformazione a ciascun elemento grazie alla funzione callback ( <i>che ha come parametri l'elemento e l'indice</i> ). Restituisce un nuovo array contenente le eventuali modifiche.
+    </p>
+    </br>
+    Di seguito è presente un esempio di utilizzo della funzione <strong>map()</strong>:
+    </br></br>
+<pre class="code_2 outside-code-toolbar" data-aos="zoom-in"><button class="copy" style="float: right;" onclick="copyCode('.code_2','.clipboard_2','.checkmark_2')">
+<span>
+  <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="clipboard_2">
+    <g>
+      <path fill="currentColor" d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path>
+    </g>
+  </svg>
+  <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="checkmark_2">
+    <g>
+      <path data-original="#000000" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
+    </g>
+  </svg>
+</span>
+</button><code class="language-javascript inside-code-toolbar">const stampa=()=>{
+  let array=[5,4,6,1,2,9]
+
+  console.log(
+      //FUNZIONE MAP
+      array.map((elemento,indice)=>{
+          return elemento*2;  //Moltiplica *2 ogni elemento dell'array
+      })
+  )
+}
+</code></pre>
+  </br></br></br>
+    </div>
+
+    </div>
+	</div>
+</div>
+<!--FINE CONTAINER-->
+
+<!-- INIZIO FOOTER -->
+<div class="container-fluid">
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/federico.galeasso/" target="blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/federicogaleasso/sitoTPSIT.git" target="blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="./index.html"><div id="footerHome">Home</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./json.html"><div id="footerJSON">JSON</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./xml.html"><div id="footerXML">XML</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./js.html"><div id="footerJS">JS Avanzato</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./react.html"><div id="footerReact">React</div></a></li>
+      <li class="menu__item"><a class="menu__link" href="./api.html"><div id="footerAPI">API</div></a></li>
+    </ul>
+    <p id="allrightsreserved">© 2023 Federico Galeasso. All rights reserved.</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+<!-- FINE FOOTER -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+<!--FINE BODY-->
+</html>
